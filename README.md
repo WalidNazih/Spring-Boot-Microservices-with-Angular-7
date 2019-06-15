@@ -21,3 +21,4 @@ Web Application using MicroServices for Portfolio Purposes.
 
 #### Libraries:
 - Angular Material
+- Flex Layout

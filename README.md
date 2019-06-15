@@ -14,3 +14,7 @@ Web Application using MicroServices for Portfolio Purposes.
 
 #### Database:
 - MySQL
+
+#### Web Services:
+- REST Webservices
+- JMS (ActiveMQ)

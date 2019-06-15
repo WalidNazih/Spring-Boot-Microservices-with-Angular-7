@@ -20,6 +20,8 @@ public class StockService implements IStockService{
 	private CategoryRepository categoryRepository;
 	@Autowired
 	private ProductRepository productRepository;
+	@Autowired
+	private IJMSService jmsService;
 	
 
 	@Override
@@ -39,16 +41,19 @@ public class StockService implements IStockService{
 
 	@Override
 	public Product addProduct(Product product) {
+		jmsService.sendMessage("product_topic", "Added new product " + product.getName());
 		return productRepository.save(product);
 	}
 
 	@Override
 	public Product updateProduct(Product product) {
+		jmsService.sendMessage("product_topic", "Updated Product " + product.getId());
 		return productRepository.save(product);
 	}
 
 	@Override
 	public void deleteProductById(Long id) {
+		jmsService.sendMessage("product_topic", "Deleted product " + id);
 		productRepository.deleteById(id);
 	}
 

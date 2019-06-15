@@ -18,3 +18,6 @@ Web Application using MicroServices for Portfolio Purposes.
 #### Web Services:
 - REST Webservices
 - JMS (ActiveMQ)
+
+#### Libraries:
+- Angular Material

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { privateEncrypt } from 'crypto';
 import { DataSource } from '@angular/cdk/table';
+import { StockService } from '../services/stock.service';
 
 export interface Category {
   name: string;
 }
 
 export interface Product {
-  position: Number;
+  id: Number;
   name: string;
   price: Number;
   category: Category;
@@ -22,30 +23,12 @@ export class HomeComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'price', 'category', 'delete'];
   dataSource: Product[];
-
-  constructor() { }
+  constructor(private stockService: StockService) { }
 
   ngOnInit() {
-
-    this.dataSource = [
-      {
-        position: 0,
-        name: 'XBOX 360',
-        price: 800,
-        category: {
-          name: 'consoles'
-        }
-      },
-      {
-        position: 1,
-        name: 'PS4',
-        price: 300,
-        category: {
-          name: 'consoles'
-        }
-      }
-    ];
-
+    this.stockService.getAllProducts().subscribe((products: Product[]) => {
+      this.dataSource = products;
+    });
   }
 
 }

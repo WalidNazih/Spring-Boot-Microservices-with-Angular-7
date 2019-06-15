@@ -9,6 +9,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { StockService } from './services/stock.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,9 +33,10 @@ const routes: Routes = [
     MatTableModule,
     MatInputModule,
     MatButtonModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [StockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

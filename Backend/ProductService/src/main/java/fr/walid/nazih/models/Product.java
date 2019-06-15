@@ -18,7 +18,7 @@ public class Product {
 	@Id @GeneratedValue
 	private Long id;
 	private String name;
-	private double prix;
+	private double price;
 	
 	@ManyToOne
 	private Category category;

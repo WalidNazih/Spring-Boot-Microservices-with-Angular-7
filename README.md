@@ -8,7 +8,9 @@ Web Application using MicroServices for Portfolio Purposes.
 - JAVA/J2EE
 - Spring Boot
 
-
 #### Front End:
 - Typescript
 - Angular 7
+
+#### Database:
+- MySQL

@@ -4,11 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import fr.walid.nazih.models.Category;
 import fr.walid.nazih.services.IStockService;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 public class ProductServiceApplication implements CommandLineRunner{
 	
 	@Autowired

@@ -3,6 +3,7 @@ package fr.walid.nazih.models;
 import java.util.Collection;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
@@ -21,7 +22,7 @@ public class AppUser {
 	private String password;
 	private boolean enabled;
 	
-	@ManyToMany
+	@ManyToMany(fetch=FetchType.EAGER)
 	private Collection<AppRole> roles;
 
 }

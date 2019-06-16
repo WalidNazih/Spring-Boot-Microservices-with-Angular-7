@@ -18,8 +18,5 @@ public class AppRole {
 	
 	@Id
 	private String role;
-	
-	@ManyToMany(mappedBy="roles")
-	private Collection<AppUser> users;
 
 }

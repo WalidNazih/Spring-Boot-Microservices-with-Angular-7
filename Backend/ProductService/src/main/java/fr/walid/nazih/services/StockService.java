@@ -35,8 +35,8 @@ public class StockService implements IStockService{
 	}
 
 	@Override
-	public Product getProductByName(String name) {
-		return productRepository.findByName(name);
+	public Collection<Product> getProductByName(String name) {
+		return productRepository.findByNameContains(name);
 	}
 
 	@Override

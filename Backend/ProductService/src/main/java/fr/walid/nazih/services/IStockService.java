@@ -9,7 +9,7 @@ public interface IStockService {
 	
 	Collection<Product> getAllProducts();
 	Collection<Product> getProductsByCategoryId(Long id);
-	Product getProductByName(String name);
+	Collection<Product> getProductByName(String name);
 	Product addProduct(Product product);
 	Product updateProduct(Product product);
 	void deleteProductById(Long id);

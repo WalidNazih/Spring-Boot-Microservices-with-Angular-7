@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>Add Product</h1>
+<div mat-dialog-content fxLayout="column">
+    <div style="font-size: 1em; color: red" *ngIf="addProductForm.invalid" fxflex>
+        <div *ngIf="productForm.name.invalid && (productForm.name.dirty || productForm.name.touched)">
+          <span *ngIf="productForm.name.errors.required">* Name is required</span>
+          <span *ngIf="productForm.name.errors.minlength">* Name must be have at least two characters</span>
+        </div>
+        <div *ngIf="productForm.price.invalid && (productForm.price.dirty || productForm.price.touched)">
+          <span *ngIf="productForm.price.errors.required">* Price is required</span>
+        </div>
+        <div *ngIf="productForm.category.invalid && (productForm.category.dirty || productForm.category.touched)">
+          <span *ngIf="productForm.category.errors.required">* Please Select a category</span>
+        </div>
+    </div>
+  <form [formGroup]="addProductForm" fxLayout="column">
+    <mat-form-field>
+      <input formControlName="name" matInput placeholder="Name" required/>
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName="price" matInput type="number" placeholder="Price" required/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Select Category</mat-label>
+      <mat-select formControlName="category" required>
+        <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
+      </mat-select>
+    </mat-form-field><br>
+    <span>* is required</span><br>
+
+    
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button cdkFocusInitial (click)="addProduct()">
+    Add Product
+  </button>
+</div>

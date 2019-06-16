@@ -9,6 +9,6 @@ import fr.walid.nazih.models.Product;
 public interface ProductRepository extends JpaRepository<Product, Long>{
 
 	Collection<Product> findAllByCategoryId(Long id);
-	Product findByName(String name);
+	Collection<Product> findByNameContains(String name);
 	
 }

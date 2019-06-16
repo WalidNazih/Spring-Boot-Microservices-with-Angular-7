@@ -51,7 +51,7 @@ public class ProductRestAPI {
 	}
 	
 	@GetMapping("{name}")
-	public Product getProductByName(@PathVariable String name){
+	public Collection<Product> getProductByName(@PathVariable String name){
 		return stockService.getProductByName(name);
 	}
 	

@@ -22,3 +22,14 @@ Web Application using MicroServices for Portfolio Purposes.
 #### Libraries:
 - Angular Material
 - Flex Layout
+
+### Cloud Architecture:
+- Config Server for remote and centralized configuration
+- Registration Service using Netflix Eureka Discovery
+- Proxy Server for a centralized endpoint using Netflix Zuul Proxy
+
+### Upcoming updates:
+- Elasticsearch integration
+- ReactJS client
+- Ionic client
+- JWT Authentication and Authorization

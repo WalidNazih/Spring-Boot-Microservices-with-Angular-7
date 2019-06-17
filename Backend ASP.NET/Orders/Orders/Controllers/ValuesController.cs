@@ -10,10 +10,21 @@ namespace Orders.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private Services.OrderDBContext DbContext;
+
+        public ValuesController(Services.OrderDBContext dBContext)
+        {
+            this.DbContext = dBContext;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            this.DbContext.Database.EnsureDeleted();
+            this.DbContext.Database.EnsureCreated();
+            this.DbContext.Orders.Add(new Models.Order() { ClientID = 1, OrderLineID = 1 });
+            this.DbContext.SaveChanges();
             return new string[] { "value1", "value2" };
         }
 

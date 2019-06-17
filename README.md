@@ -1,6 +1,10 @@
 # Spring Boot Microservices and Angular 7
 Web Application using MicroServices for Portfolio Purposes.
 
+
+## Projects Architectures:
+![Java EE Architecture](javaee-architecture.png?raw=true "Java EE Architecture")
+
 ## Technologies and Frameworks used:
 
 ### Back-End:
@@ -42,3 +46,4 @@ Web Application using MicroServices for Portfolio Purposes.
 - Elasticsearch integration
 - ReactJS client
 - Ionic client
+

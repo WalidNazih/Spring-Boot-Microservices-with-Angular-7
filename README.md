@@ -8,7 +8,7 @@ Web Application using MicroServices for Portfolio Purposes.
 #### J2EE: 
 - JAVA/J2EE
 - Spring Boot (WEB, CLOUD, DATA, SECURITY)
-- JWT Authentication
+- JWT Authentication and Authorization
 
 #### ASP.NET:
 - C#

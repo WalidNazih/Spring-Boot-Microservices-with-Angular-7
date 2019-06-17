@@ -8,6 +8,7 @@ Web Application using MicroServices for Portfolio Purposes.
 #### J2EE: 
 - JAVA/J2EE
 - Spring Boot (WEB, CLOUD, DATA, SECURITY)
+- JWT Authentication
 
 #### ASP.NET:
 - C#
@@ -41,4 +42,3 @@ Web Application using MicroServices for Portfolio Purposes.
 - Elasticsearch integration
 - ReactJS client
 - Ionic client
-- JWT Authentication and Authorization

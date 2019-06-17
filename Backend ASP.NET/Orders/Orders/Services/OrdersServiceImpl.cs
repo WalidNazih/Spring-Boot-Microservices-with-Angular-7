@@ -25,7 +25,9 @@ namespace Orders.Services
 
         public void DeleteOrder(int OrderID)
         {
-            throw new NotImplementedException();
+            Order order = OrderRepository.Orders.Where(Order => Order.OrderID == OrderID).First();
+            OrderRepository.Orders.Remove(order);
+            OrderRepository.SaveChanges();
         }
 
         public ICollection<Order> GetOrders()
@@ -35,7 +37,9 @@ namespace Orders.Services
 
         public Order UpdateOrder(Order order)
         {
-            throw new NotImplementedException();
+            Order OrderUpdated = OrderRepository.Orders.Update(order).Entity;
+            OrderRepository.SaveChanges();
+            return OrderUpdated;
         }
     }
 }

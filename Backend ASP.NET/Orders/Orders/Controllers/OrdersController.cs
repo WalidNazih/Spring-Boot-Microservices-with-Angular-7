@@ -26,5 +26,24 @@ namespace Orders.Controllers
             return OrdersService.GetOrders().ToList();
         }
 
+        [HttpPost]
+        public ActionResult<Order> AddOrder([FromBody] Order order)
+        {
+            return OrdersService.AddOrder(order);
+        }
+
+        [HttpDelete("{id}")]
+        public void DeleteOrder([FromRoute] int id)
+        {
+            OrdersService.DeleteOrder(id);
+        }
+
+        [HttpPut]
+        public ActionResult<Order> UpdateOrder([FromBody] Order order)
+        {
+            Order UpdatedOrder = OrdersService.UpdateOrder(order);
+            return UpdatedOrder;
+        }
+
     }
 }

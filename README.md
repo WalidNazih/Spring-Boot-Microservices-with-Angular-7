@@ -3,7 +3,7 @@ Web Application using MicroServices for Portfolio Purposes.
 
 
 ## Projects Architectures:
-![Java EE Architecture](javaee-arch.png?raw=true "Java EE Architecture")
+![Java EE Architecture](javaee.png?raw=true "Java EE Architecture")
 
 ## Technologies and Frameworks used:
 

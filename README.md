@@ -29,7 +29,7 @@ Web Application using MicroServices for Portfolio Purposes.
 
 ### Front-End:
 
-#### Front End:
+#### Angular Client:
 - Typescript
 - Angular 7
 
